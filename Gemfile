@@ -9,6 +9,8 @@ end
 
 source 'https://rubygems.org'
 
+ruby '2.5.1'
+
 gem 'coffee-rails', '4.2.2'
 gem 'jbuilder',     '2.7.0'
 gem 'jquery-rails', '4.3.1'

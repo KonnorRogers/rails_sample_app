@@ -4,5 +4,4 @@
 
 require_relative 'config/environment'
 
-ruby '2.5.1'
 run Rails.application
