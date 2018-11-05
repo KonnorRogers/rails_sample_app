@@ -1,5 +1,7 @@
 {
   "name": "static_pages",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "prettier": "^1.14.3"
+  }
 }
