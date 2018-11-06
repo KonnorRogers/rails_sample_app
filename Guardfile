@@ -14,6 +14,8 @@
 #  $ ln -s config/Guardfile .
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
+#
+guard :minitest, spring: "bin/rails test", all_on_start: false do
 
 guard :minitest do
   # with Minitest::Unit
