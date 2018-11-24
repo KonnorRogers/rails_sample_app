@@ -2,4 +2,5 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  include SessionsHelper # Adds sessions helper for use by all controller
 end
