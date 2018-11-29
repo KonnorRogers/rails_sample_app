@@ -18,8 +18,9 @@ class User < ApplicationRecord
             format: { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
 
-  has_secure_password # uses bcrypt
-  validates :password, presence: true, length: { minimum: 6 }
+  has_secure_password # uses bcrypt, checks for nil so we dont have to validate
+
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   # Methods
 

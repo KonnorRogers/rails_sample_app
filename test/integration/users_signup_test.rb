@@ -6,7 +6,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   test 'invalid signup info' do
     get signup_path
 
-    assert_select 'form[action="/signup"]' # checks for proper signup url
+    assert_select 'form[action="/users"]' # checks for proper signup url
 
     # tests prior to and after the block
     assert_no_difference 'User.count' do
