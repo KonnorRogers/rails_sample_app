@@ -19,15 +19,22 @@ archer:
 lana:
   name: Lana Kana
   email: hands@example.gov
-  password_digest: <% User.digest('password') %>
+  password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
 
 malory:
   name: Malory Archer
   email: boss@example.gov
-  password_digest: <% User.digest('password') %>
+  password_digest: <%= User.digest('password') %>
   activated: true
+  activated_at: <%= Time.zone.now %>
+
+not_activated:
+  name: not activated
+  email: notactivated@notactivated.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
   activated_at: <%= Time.zone.now %>
 
 <% 30.times do |num| %>
