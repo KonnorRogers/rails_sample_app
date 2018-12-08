@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'sessions_controller/new'
-
   get 'password_resets/new'
 
   get 'password_resets/edit'
