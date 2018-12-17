@@ -20,5 +20,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :account_activations, only: [:edit]
+  # %i[] is the same as [:foo, :bar]
   resources :password_resets, only: %i[new create edit update]
+  resources :microposts, only: %i[create destroy]
 end

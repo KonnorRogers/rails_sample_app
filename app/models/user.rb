@@ -86,6 +86,10 @@ class User < ApplicationRecord
     # Reads as reset_sent_at '< earlier than' 2.hours.ago
   end
 
+  def feed
+    Micropost.where('user_id = ?', id)
+  end
+
   private
 
   # converts emails to lowercase
