@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   # basically creates routes of the following:
   # /users/1/following following_user_path(1)
-  # /users/1/followers follower_user_path(1)
+  # /users/1/followers followers_user_path(1)
   resources :users do
     member do
       get :following, :followers
