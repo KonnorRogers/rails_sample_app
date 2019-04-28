@@ -18,13 +18,17 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  # basically creates routes of the following:
+  # /users/1/following following_user_path(1)
+  # /users/1/followers follower_user_path(1)
   resources :users do
     member do
       get :following, :followers
     end
   end
+
   resources :account_activations, only: [:edit]
-  # %i[] is the same as [:foo, :bar]
   resources :password_resets, only: %i[new create edit update]
   resources :microposts, only: %i[create destroy]
+  resources :relationships, only: %i[create destroy]
 end
