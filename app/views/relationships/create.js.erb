@@ -1,0 +1,3 @@
+// uses ajax to unfollow a user, replaces the value of #follow_form with users/unfollow
+$("#follow_form").html("<%= escape_javascript(render('users/unfollow')) %>");
+$("#followers").html("<%= @user.followers.count %>");
